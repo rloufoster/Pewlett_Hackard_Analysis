@@ -45,3 +45,36 @@ WHERE (de.to_date = '9999-01-01') AND (e.birth_date BETWEEN '1965-01-01' AND '19
 ORDER BY e.emp_no
 
 SELECT * FROM mentorship_eligibility
+
+----SUMMARY CODE
+
+--How many employees will be retiring
+SELECT DISTINCT ON (emp_no) e.emp_no, e.first_name, e.last_name, e.birth_date, de.from_date, de.to_date, t.title
+INTO will_be_retiring
+FROM employees as e
+JOIN dept_emp as de
+ON (e.emp_no = de.emp_no)
+JOIN titles as t
+ON (e.emp_no = t.emp_no)
+WHERE (de.to_date = '9999-01-01') AND (e.birth_date BETWEEN '1962-01-01' AND '1965-12-31')
+	AND (de.from_date BETWEEN '1985-01-01' AND '1988-12-31')
+ORDER BY e.emp_no
+
+SELECT * FROM will_be_retiring
+
+
+--How many employees will be retiring within each department
+SELECT DISTINCT ON (emp_no) e.emp_no, d.dept_name, e.first_name, e.last_name, e.birth_date, de.from_date, de.to_date, t.title
+INTO will_be_retiring_bydept
+FROM employees as e
+JOIN dept_emp as de
+ON (e.emp_no = de.emp_no)
+JOIN titles as t
+ON (e.emp_no = t.emp_no)
+LEFT JOIN departments as d
+ON (de.dept_no = d.dept_no)
+WHERE (de.to_date = '9999-01-01') AND (e.birth_date BETWEEN '1962-01-01' AND '1965-12-31')
+	AND (de.from_date BETWEEN '1985-01-01' AND '1988-12-31')
+ORDER BY e.emp_no
+
+SELECT * FROM will_be_retiring_bydept
