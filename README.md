@@ -23,7 +23,7 @@ The original data:
 
 ### Retirement Eligible Employees and their Titles
 
-* The retirement_titles.csv table was created by joining the employees.csv and titles.csv and filtering the data on employees born         between 1952 and 1955. See [retirement_titles.csv] (https://raw.githubusercontent.com/rloufoster/Pewlett_Hackard_Analysis/main/Pewlett_Hackard_Analysis_Folder/Data_Challenge/retirement_titles.csv)
+* The retirement_titles.csv table was created by joining the employees.csv and titles.csv and filtering the data on employees born         between 1952 and 1955. See [retirement_titles.csv](https://raw.githubusercontent.com/rloufoster/Pewlett_Hackard_Analysis/main/Pewlett_Hackard_Analysis_Folder/Data_Challenge/retirement_titles.csv)
 
    
    ![retirement_titles_code](https://github.com/rloufoster/Pewlett_Hackard_Analysis/blob/main/Pewlett_Hackard_Analysis_Folder/challenge_resources/retirement_titles_code.png)
@@ -37,7 +37,7 @@ The original data:
 
 
 * To get a cummulative count along with the titles, the retiring_titles query was performed by using COUNT on the unique_titles table.
-  Of the 90,398 employees eligible for retirement, there are 29,414 Senior Engineers, 28,254 Senior Staff, 14,222 Engineers, 12,243         Staff, 4,502 Technique Leaders, 1,761 Assistant Engineers, and 2 Managers. See below.
+  Of the **90,398** employees eligible for retirement, there are 29,414 Senior Engineers, 28,254 Senior Staff, 14,222 Engineers, 12,243         Staff, 4,502 Technique Leaders, 1,761 Assistant Engineers, and 2 Managers. See below.
 
    
    ![retiring_titles_table](https://github.com/rloufoster/Pewlett_Hackard_Analysis/blob/main/Pewlett_Hackard_Analysis_Folder/challenge_resources/Retiring_Titles_Table.png)
@@ -47,7 +47,7 @@ The original data:
 ### Determine the employees eligible for the Mentorship Program
 
 * The mentorship_eligibility data was captured by joining the employees.csv, department.csv, employees.csv, and titles.csv tables.  
-  This query filtered on employees who were born in 1965 and that are currently working at Pewlett Hackard. There are 1,549 employees       eligible for the mentorship/semi-retirement package using these criteria. See [mentorship_eligibilty.csv]    ! 
+  This query filtered on employees who were born in 1965 and that are currently working at Pewlett Hackard. There are **1,549** employees   eligible for the mentorship/semi-retirement package using these criteria. See [mentorship_eligibilty.csv]    ! 
   
   ![mentorship_eligibility_code](https://github.com/rloufoster/Pewlett_Hackard_Analysis/blob/main/Pewlett_Hackard_Analysis_Folder/challenge_resources/mentorship_eligibility_code.png)
 
@@ -56,7 +56,10 @@ The original data:
 
 * How many roles will need to be filled as the "silver tsunami" begins to make an impact: 
    
+   ![employees_leaving_code](https://github.com/rloufoster/Pewlett_Hackard_Analysis/blob/main/Pewlett_Hackard_Analysis_Folder/challenge_resources/employees_leaving_code.png)
 
 * Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+  
+  ![employees_leaving_by_dept_totals_table](https://github.com/rloufoster/Pewlett_Hackard_Analysis/blob/main/Pewlett_Hackard_Analysis_Folder/challenge_resources/employees_leaving_by_dept_totals_table.png)
   
 In order for Pewlett Hackard to be best prepared, we must equip ourselves with two crucial points of information: 1.)   to create systems to maintain our competive edge
